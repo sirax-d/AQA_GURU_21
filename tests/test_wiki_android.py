@@ -12,5 +12,5 @@ def test_open_article(mobile_management_android):
 
     with step('Verify article opened and valid'):
         result = browser.all((AppiumBy.ID, 'org.wikipedia.alpha:id/page_list_item_title'))
-        result.first.should(have.text('Python'))
         result.should(have.size_greater_than(0))
+        result.first.should(have.text('Python'))
